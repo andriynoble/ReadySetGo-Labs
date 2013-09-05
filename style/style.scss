@@ -1,0 +1,81 @@
+@import "bourbon";
+@import "neat";
+@import "_normalize";
+@import "_typeplate";
+@import "_vars-typeplate";
+@import "_font-awesome";
+
+body {
+	margin: none;
+	padding: none;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Gotham Bold";
+	}
+	a, p, li, span {
+		font-family: "Bariol";
+	}
+}
+header {
+	@include outer-container;
+	$mobile: new-breakpoint(max-width 500px 6);
+	padding-top: 20px;
+	.logo {
+		@include span-columns(7);
+		@include media($mobile) {
+			@include span-columns(3);
+		}
+		a {
+			text-decoration: none;
+			color: #0FA564;
+			font-family: "Gotham Bold";
+			font-weight: bold;
+		}
+	}
+	nav {
+		@include span-columns(5);
+		@include media($mobile) {
+			@include span-columns(3);
+		}
+		float: right;
+		a {
+			text-decoration: none;
+			color: #333;
+			padding: 5px;
+		}
+		a:hover {
+			color: #0FA564;
+		}
+		.hire {
+			padding: 5px 10px 5px 10px;
+			background-color: #0FA564;
+			color: #fff;
+		}
+		.hire:hover {
+			background-color: #057949;
+			color: #fff;
+			box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+		}
+	}
+}
+section.hero {
+	padding-top: 50px;
+	@include outer-container;
+	article.text {
+		@include span-columns(6);
+		p {
+			padding-bottom: 10px;
+		}
+		a.start {
+			background-color: #C71614;
+			color: #fff;
+			text-decoration: none;
+			padding: 8px 12px 8px 12px;
+		}
+	}
+	article.picture {
+		@include span-columns(6);
+	}
+}
+.r {
+	font-family: "rosario";
+}
